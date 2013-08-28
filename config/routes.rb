@@ -1,8 +1,8 @@
 Xsn::Application.routes.draw do
-  resources :events
+#  resources :events
+#  resources :ideas
 
   get "welcome/index"
-  resources :ideas
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
