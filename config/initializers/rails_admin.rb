@@ -38,6 +38,28 @@ RailsAdmin.config do |config|
 
   ################  Model configuration  ################
 
+  config.model 'Idea' do
+      list do
+        field :title
+        field :description
+      end
+      edit do
+        field :title
+        field :description
+      end
+    end
+    
+    config.model 'Event' do
+        list do
+          field :idea
+          field :location
+        end
+        edit do
+          field :idea
+          field :location
+        end
+      end    
+
   # Each model configuration can alternatively:
   #   - stay here in a `config.model 'ModelName' do ... end` block
   #   - go in the model definition file in a `rails_admin do ... end` block
