@@ -1,4 +1,6 @@
 Xsn::Application.routes.draw do
+  resources :events
+
   get "welcome/index"
   resources :ideas
 
