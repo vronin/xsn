@@ -35,7 +35,20 @@ end
 gem 'cancan'
 gem 'rails_admin'
 
-
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'less'
+  gem 'commonjs'
+  gem 'therubyracer', :platforms => :ruby
+end
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'libv8'
+gem 'jquery-rails'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
