@@ -32,7 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'cancan'
 gem 'rails_admin'
+
 
 
 # Use ActiveModel has_secure_password
