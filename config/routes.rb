@@ -1,9 +1,17 @@
 Xsn::Application.routes.draw do
-  root "welcome#index"
   get "welcome/index"
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
+  authenticated do
+    root "rails_admin/main#dashboard", as: :authenticated_root
+  end
+  unauthenticated do  
+    root "welcome#index"
+  end 
+    
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
