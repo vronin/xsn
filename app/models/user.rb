@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  AVALIABLE_ROLES = %w(user researcher manager admin)
+         
+  validates :role, presence: true, inclusion: { :in => AVALIABLE_ROLES }
 end

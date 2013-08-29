@@ -60,7 +60,24 @@ RailsAdmin.config do |config|
           field :idea
           field :location
         end
-      end    
+      end   
+      
+      config.model 'User' do
+           list do
+             field :email
+             field :role
+           end
+           edit do
+             field :email
+             field :password
+             field :password_confirmation                          
+             field :role,  :enum do 
+                enum do
+                    User::AVALIABLE_ROLES
+                end
+              end
+           end
+         end       
 
   # Each model configuration can alternatively:
   #   - stay here in a `config.model 'ModelName' do ... end` block
