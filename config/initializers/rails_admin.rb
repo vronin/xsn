@@ -41,12 +41,13 @@ RailsAdmin.config do |config|
   ################  Model configuration  ################
 
   config.model 'Idea' do
-      list do
+      list do        
         field :title
         field :description
       end
       edit do
         field :title
+        field :image, :paperclip        
         field :description
       end
     end
