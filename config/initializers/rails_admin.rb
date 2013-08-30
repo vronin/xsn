@@ -55,10 +55,12 @@ RailsAdmin.config do |config|
     config.model 'Event' do
         list do
           field :idea
+          field :title
           field :location
         end
         edit do
           field :idea
+          field :title
           field :location
         end
       end   
