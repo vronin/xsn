@@ -4,12 +4,14 @@ Xsn::Application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
-  authenticated do
-    root "rails_admin/main#dashboard", as: :authenticated_root
+  class PrivelegedUserContraint
+    def self.matches?(request)
+      request.env['warden'].authenticated? && request.env['warden'].user.role != "user" 
+    end
   end
-  unauthenticated do  
-    root "welcome#index"
-  end 
+  
+  root "rails_admin/main#dashboard", as: :authenticated_root, constraints: PrivelegedUserContraint
+  root "welcome#index"
     
   
   # The priority is based upon order of creation: first created -> highest priority.
