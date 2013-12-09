@@ -15,9 +15,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -32,8 +29,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Devise is for authentication and CanCan is for authorization
 gem 'cancan'
+gem "devise"
+
+
+# RailsAdmin to manage all resourecs
 gem 'rails_admin'
+
+# Paperclip is to upload files into DB
 gem "paperclip"
 
 # Gems used only for assets and not required
@@ -51,17 +55,6 @@ gem 'twitter-bootstrap-rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
 
-gem "devise"
+
