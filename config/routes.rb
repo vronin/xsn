@@ -10,11 +10,13 @@ Xsn::Application.routes.draw do
   
   # Our common routes
   get "welcome/index"
+  get "welcome_authorized/index"
   get "welcome/about" => "welcome#about"
 
   # Rails admin for resource management
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   # Root entries 
-  root "welcome#index"
+  root "welcome_authorized#index", as: :authenticated_root, constraints: lambda { |r| r.env["warden"].authenticate? }
+  root "welcome#index"  
 end

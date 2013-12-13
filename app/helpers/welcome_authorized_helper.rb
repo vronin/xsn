@@ -1,0 +1,2 @@
+module WelcomeAuthorizedHelper
+end
