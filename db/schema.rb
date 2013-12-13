@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130830164051) do
+ActiveRecord::Schema.define(version: 20131213154349) do
 
   create_table "events", force: true do |t|
     t.string   "location"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20130830164051) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.datetime "start_datetime"
+    t.datetime "end_datetime"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "events", ["idea_id"], name: "index_events_on_idea_id"

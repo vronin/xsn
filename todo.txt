@@ -1,0 +1,10 @@
+User side:
+
+- Browse upcoming and old events by location
+- Buy an access to the event
+- Rate event quality, rate information for event quality
+
+Admin side:
+
+- Create a research for an idea
+

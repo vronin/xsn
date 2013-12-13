@@ -25,14 +25,20 @@
 	              		</li>
 	              		<li class="">
 	                		<%= link_to "About", welcome_about_path %>
-	              		</li>
+						</li>
+	              	
 	            	</ul>
 					<ul class="nav pull-right"> 
+						<li>
+							<% if user_signed_in? and current_user.role != 'user' %>
+								<%= link_to "Admin", rails_admin_path %>
+							<% end %>		
+						</li>
 						<li> 
-							<% if user_signed_in? %>
-								<%= link_to "SignOut", destroy_user_session_path, :method => :delete %>		
+							<% if user_signed_in? %>	
+								<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>		
 							<% else %>
-								<%= link_to "SignIn", new_user_session_path %>
+								<%= link_to "Sign In", new_user_session_path %>
 							<% end %>
 						</li>
 					</ul>

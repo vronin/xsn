@@ -16,6 +16,5 @@ Xsn::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   # Root entries 
-  root "rails_admin/main#dashboard", as: :authenticated_root, constraints: PrivelegedUserConstraint
   root "welcome#index"
 end

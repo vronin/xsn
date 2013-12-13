@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base  
   
-  # - Associations
+  # - Associations -
   
-  # - Accessors
+  # - Accessors -
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  # - Validations
+  # - Validations -
 
   # Add roles to users model for further authentication by cancan
   AVALIABLE_ROLES = %w(user researcher manager admin)

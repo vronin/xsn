@@ -18,4 +18,9 @@ class Event < ActiveRecord::Base
   validates :idea, presence: true
   validates :title, presence: true  
   
+  # - Other
+  
+  geocoded_by :location
+  after_validation :geocode, if: :location_changed?
+  
 end

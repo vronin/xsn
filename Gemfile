@@ -33,12 +33,14 @@ end
 gem 'cancan'
 gem "devise"
 
-
 # RailsAdmin to manage all resourecs
 gem 'rails_admin'
 
 # Paperclip is to upload files into DB
 gem "paperclip"
+
+# Add geolocation gem
+gem 'geocoder'
 
 # Gems used only for assets and not required
 # in production environments by default.

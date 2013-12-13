@@ -62,6 +62,8 @@ RailsAdmin.config do |config|
           field :idea
           field :title
           field :location
+          field :start_datetime
+          field :end_datetime          
         end
       end   
       
