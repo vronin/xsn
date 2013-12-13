@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
+  # Authenticate to all pages
+  before_filter :authenticate_user!  
   
   #### This is just a hack to reload RailsAdmin initialization ####
   before_filter :reload_rails_admin if :rails_admin_path?
