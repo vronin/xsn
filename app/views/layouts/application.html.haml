@@ -1,0 +1,29 @@
+%html
+	%head
+		%title Xsn
+		%meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
+		= javascript_include_tag "application", "data-turbolinks-track" => true 
+		= csrf_meta_tags
+	%body
+		.navbar.navbar-inverse.navbar-fixed-top
+			.navbar-inner
+				.container
+					.nav-collapse.collapse
+						%ul.nav
+							%li.active
+								= link_to "XSN", root_path, :class =>"brand"
+							%li
+								= link_to "About", welcome_about_path
+						%ul.nav.pull-right
+							%li
+								- if user_signed_in? and current_user.role != 'user'
+									= link_to "Admin", rails_admin_path
+							%li
+								- if user_signed_in?
+									= link_to "Sign Out", destroy_user_session_path, :method => :delete
+								- else
+									= link_to "Sign In", new_user_session_path
+		.container
+			.row
+				= yield

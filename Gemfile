@@ -21,14 +21,6 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Devise is for authentication and CanCan is for authorization
 gem 'cancan'
 gem "devise"
@@ -42,14 +34,10 @@ gem "paperclip"
 # Add geolocation gem
 gem 'geocoder'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'less'
-  gem 'commonjs'
-  gem 'therubyracer', :platforms => :ruby
-end
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# Let's use HAML instead of ERB
+gem 'haml'
+
+# Bootstrap theme related gems
 gem 'libv8'
 gem 'jquery-rails'
 gem 'less-rails'
@@ -57,6 +45,15 @@ gem 'twitter-bootstrap-rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'less'
+  gem 'commonjs'
+  gem 'therubyracer', :platforms => :ruby
+end
 
-
-
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end

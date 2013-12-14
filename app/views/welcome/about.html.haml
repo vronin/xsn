@@ -1,0 +1,6 @@
+%table
+	%tbody
+		%tr
+			%iframe{width: 800, height:600, src: "http://www.powtoon.com/embed/dpUgbEys0e5/"}
+			- if !user_signed_in?
+				- link_to "Sign Up", new_user_session_path

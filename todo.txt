@@ -1,5 +1,6 @@
 User side:
 
+- HAML
 - Browse upcoming and old events by location
 - Buy an access to the event
 - Rate event quality, rate information for event quality
