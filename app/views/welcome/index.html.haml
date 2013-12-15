@@ -4,6 +4,6 @@
 			Here are couple of samples on things to do. Sign in to see more.
 			- @random_events.each do |event|
 				%td
-					- image_tag event.image.url(:medium)
-					- event.title
-					- event.location
+					= image_tag event.image.url(:medium)					
+					= event.title
+					= event.location
